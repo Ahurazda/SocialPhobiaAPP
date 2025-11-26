@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="SocialPhobiaAPP.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:SocialPhobiaAPP.Pages"
+    xmlns:chapters="clr-namespace:SocialPhobiaAPP.Pages.Chapters"
+    Title="SocialPhobiaAPP">
+
+    <TabBar>
+
+        <Tab Icon="home.png">
+            <ShellContent
+
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+        </Tab>
+
+        <Tab Icon="diary.jpg">
+            <ShellContent
+
+        ContentTemplate="{DataTemplate local:DiaryPage}"
+        Route="diaryPage" />
+
+        </Tab>
+    </TabBar>
+
+    <ShellContent
+
+        ContentTemplate="{DataTemplate chapters:ChapterPage}"
+        Route="chapterPage" />
+
+    <ShellContent
+
+        ContentTemplate="{DataTemplate chapters:FinalChapterPage}"
+        Route="finalChapterPage" />
+
+    <ShellContent
+
+    ContentTemplate="{DataTemplate local:SettingsPage}"
+    Route="settingsPage" />
+</Shell>

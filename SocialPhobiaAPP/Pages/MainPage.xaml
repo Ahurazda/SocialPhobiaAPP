@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SocialPhobiaAPP.Pages.MainPage"
+             >
+
+    <ContentPage.Resources>
+        <Style TargetType="HorizontalStackLayout">
+            <Setter Property="BackgroundColor" Value="LightGray"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="HeightRequest" Value="130"/>
+        </Style>
+    </ContentPage.Resources>
+    
+    <ScrollView>
+        <VerticalStackLayout Spacing="20" Padding="10" Margin="10,0,10,0">
+
+            <ImageButton Source="settings.png" HorizontalOptions="End" HeightRequest="30" Clicked="SettingsButton_Clicked"/>
+
+            <Label 
+         Text="Hello Jack!"
+         VerticalOptions="Center" 
+         HorizontalOptions="Center" />
+
+            <HorizontalStackLayout ClassId="Chapter1">
+                <HorizontalStackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </HorizontalStackLayout.GestureRecognizers>
+
+                <Image Source="imagem.jpg" WidthRequest="100" HeightRequest="100"/>
+                <VerticalStackLayout Padding="10,0,0,0" VerticalOptions="Center">
+
+
+                    <Label Text="Welcome " FontAttributes="Bold" LineBreakMode="TailTruncation" WidthRequest="150"/>
+
+                    <Label Text="Here's your summary for today:" />
+
+                </VerticalStackLayout>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout ClassId="Chapter2">
+                <HorizontalStackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </HorizontalStackLayout.GestureRecognizers>
+
+
+                <Image Source="imagem.jpg" WidthRequest="100" HeightRequest="100"/>
+                <VerticalStackLayout Padding="10,0,0,0" VerticalOptions="Center">
+
+                    <Label Text="Overcome" FontAttributes="Bold" WidthRequest="150" LineBreakMode="WordWrap"/>
+
+                    <Label Text="Here's your summary for today:" />
+
+                </VerticalStackLayout>
+
+
+            </HorizontalStackLayout>
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

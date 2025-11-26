@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SocialPhobiaAPP.Pages.Chapters.ChapterPage"
+             >
+
+
+                <VerticalStackLayout Padding="10" Spacing="10">
+                    <ImageButton Source="left_arrow.png" BorderColor="Blue" HeightRequest="15" HorizontalOptions="Start" Clicked="Back_Clicked"/>
+                    <ImageButton Source="close.png" BorderColor="Blue" HeightRequest="15" HorizontalOptions="End" Clicked="Close_Clicked"                     />
+
+                    <ProgressBar x:Name="ChapterProgressBar" ProgressColor="Green" Progress="{Binding Progress}" HeightRequest="30" />
+                    <Label x:Name="Title" Text="{Binding Title }" HorizontalOptions="Center"/>
+                    <Label x:Name="ChapterText" Text="{Binding  ChapterText}" HorizontalOptions="Center" FontAttributes="Bold"/>
+                    <Image Source="{Binding Image }" WidthRequest="40" HorizontalOptions="Center"/>
+                    <ImageButton Source="continue_arrow.png" BorderColor="Blue" HeightRequest="15" HorizontalOptions="End" Clicked="Next_Clicked"/>
+                </VerticalStackLayout>
+        
+           
+
+
+</ContentPage>
