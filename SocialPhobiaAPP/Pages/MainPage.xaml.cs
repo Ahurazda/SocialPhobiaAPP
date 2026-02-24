@@ -3,23 +3,13 @@ using System.Threading.Tasks;
 namespace SocialPhobiaAPP.Pages;
 
 public partial class MainPage : ContentPage
-
-
 {
-
-
     public MainPage()
     {
 
-
-        InitializeComponent();
-
+        InitializeComponent(); 
 
     }
-
-
-
-
 
     private async void TapGestureRecognizer_Tapped(object sender, TappedEventArgs e)
     {
@@ -28,14 +18,13 @@ public partial class MainPage : ContentPage
         {
             string name = tappedStack.ClassId;
             
-            await Shell.Current.GoToAsync($"///chapterPage?name={name}");
+            await Shell.Current.GoToAsync($"//chapterPage?name={name}");
 
         }
 
     }
-
    private async void SettingsButton_Clicked(object sender, EventArgs e)
     {
-        await Shell.Current.GoToAsync("///settingsPage");
+        await Shell.Current.GoToAsync("//settingsPage");
     }
 }

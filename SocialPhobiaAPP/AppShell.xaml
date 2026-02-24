@@ -5,39 +5,25 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:SocialPhobiaAPP.Pages"
     xmlns:chapters="clr-namespace:SocialPhobiaAPP.Pages.Chapters"
-    Title="SocialPhobiaAPP">
+    Title="SocialPhobiaAPP"
+    Shell.FlyoutBehavior="Disabled">
 
     <TabBar>
-
-        <Tab Icon="home.png">
-            <ShellContent
-
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
-
+        <Tab Icon="home.png" Title="Home" >
+            <ShellContent  ContentTemplate="{DataTemplate local:MainPage}" Route="MainPage" />
         </Tab>
-
-        <Tab Icon="diary.jpg">
-            <ShellContent
-
-        ContentTemplate="{DataTemplate local:DiaryPage}"
-        Route="diaryPage" />
-
+        <Tab Icon="diary.png" Title="Diary">
+            <ShellContent ContentTemplate="{DataTemplate local:DiaryPage}" Route="diaryPage" />
+        </Tab>
+        <Tab Icon="lotus.png" Title="Relaxation">
+            <ShellContent ContentTemplate="{DataTemplate local:TechniquesPage}" Route="techniquesPage" />
         </Tab>
     </TabBar>
 
-    <ShellContent
-
-        ContentTemplate="{DataTemplate chapters:ChapterPage}"
-        Route="chapterPage" />
-
-    <ShellContent
-
-        ContentTemplate="{DataTemplate chapters:FinalChapterPage}"
-        Route="finalChapterPage" />
-
-    <ShellContent
-
-    ContentTemplate="{DataTemplate local:SettingsPage}"
-    Route="settingsPage" />
+    <ShellContent Route="finalChapterPage" ContentTemplate="{DataTemplate chapters:FinalChapterPage}" />
+    <ShellContent Route="chapterPage" ContentTemplate="{DataTemplate chapters:ChapterPage}" />
+    <ShellContent Route="settingsPage" ContentTemplate="{DataTemplate local:SettingsPage}" />
+    <ShellContent Route="editorDiaryPage" ContentTemplate="{DataTemplate local:EditorDiaryPage}" />
+    <ShellContent Route="breathingPage" ContentTemplate="{DataTemplate local:BreathingPage}" />
+    <ShellContent Route="meditationPage" ContentTemplate="{DataTemplate local:MeditationPage}"/>
 </Shell>

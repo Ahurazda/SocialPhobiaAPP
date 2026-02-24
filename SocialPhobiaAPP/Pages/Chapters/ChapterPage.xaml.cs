@@ -10,7 +10,6 @@ public partial class ChapterPage : ContentPage
 
 
     ChapterViewModel vm;
-    
     private string _name;
 
     public string Name
@@ -19,7 +18,6 @@ public partial class ChapterPage : ContentPage
         set
         {
             _name = value;
-            
             vm.LoadChapterByName(_name);
         }
     }
@@ -40,7 +38,8 @@ public partial class ChapterPage : ContentPage
         int lastIndex = vm.sections.Count - 1;
         if ( vm.Index == lastIndex )
         {
-            await Shell.Current.GoToAsync("/FinalChapterPage");
+            vibrate();
+            await Shell.Current.GoToAsync("//finalChapterPage");
 
         } else {
             if (vm.Index < lastIndex)
@@ -57,6 +56,18 @@ public partial class ChapterPage : ContentPage
         }
     }
 
+    private void vibrate()
+    {
+        try
+        {
+            int vibrationTime = 500;
+            Vibration.Default.Vibrate(TimeSpan.FromMilliseconds(vibrationTime));
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Vibration failed: {ex.Message}");
+        }
+    }
 
     private async void Close_Clicked(object sender, EventArgs e)
     {

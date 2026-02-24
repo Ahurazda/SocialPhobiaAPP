@@ -6,58 +6,120 @@
 
     <ContentPage.Resources>
         <Style TargetType="HorizontalStackLayout">
-            <Setter Property="BackgroundColor" Value="LightGray"/>
+            <Setter Property="BackgroundColor" Value="WhiteSmoke"/>
             <Setter Property="Padding" Value="10"/>
             <Setter Property="HeightRequest" Value="130"/>
         </Style>
+
     </ContentPage.Resources>
-    
+
     <ScrollView>
-        <VerticalStackLayout Spacing="20" Padding="10" Margin="10,0,10,0">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
 
-            <ImageButton Source="settings.png" HorizontalOptions="End" HeightRequest="30" Clicked="SettingsButton_Clicked"/>
-
-            <Label 
-         Text="Hello Jack!"
-         VerticalOptions="Center" 
-         HorizontalOptions="Center" />
-
-            <HorizontalStackLayout ClassId="Chapter1">
-                <HorizontalStackLayout.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
-                </HorizontalStackLayout.GestureRecognizers>
-
-                <Image Source="imagem.jpg" WidthRequest="100" HeightRequest="100"/>
-                <VerticalStackLayout Padding="10,0,0,0" VerticalOptions="Center">
-
-
-                    <Label Text="Welcome " FontAttributes="Bold" LineBreakMode="TailTruncation" WidthRequest="150"/>
-
-                    <Label Text="Here's your summary for today:" />
-
-                </VerticalStackLayout>
+            <HorizontalStackLayout BackgroundColor="PowderBlue" Padding="10" Grid.Row="0">
+                <Label Text=" Mind Health" FontAttributes="Bold" FontSize="20" VerticalOptions="Center" />
+                <ImageButton Source="settings.png" WidthRequest="20"
+             HeightRequest="20" HorizontalOptions="End"  Clicked="SettingsButton_Clicked"/>
             </HorizontalStackLayout>
 
-            <HorizontalStackLayout ClassId="Chapter2">
-                <HorizontalStackLayout.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
-                </HorizontalStackLayout.GestureRecognizers>
+            <VerticalStackLayout Spacing="20" Padding="10" Margin="10,0,10,0" Grid.Row="1">
+
+                <Label Text="Hello! How are you feeling today?" VerticalOptions="Center" HorizontalOptions="Center" />
+
+                <Border HeightRequest="120" StrokeShape="RoundRectangle 20" Stroke="Beige">
+                    <HorizontalStackLayout ClassId="Chapter1">
+                        <HorizontalStackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                        </HorizontalStackLayout.GestureRecognizers>
+
+                        <Image Source="imagem.jpg" WidthRequest="100" HeightRequest="100"/>
+                        <VerticalStackLayout Padding="10,0,0,0" VerticalOptions="Center">
+                            <Label Text="What is social anxiety? " FontAttributes="Bold" LineBreakMode="TailTruncation" 
+                                   
+                                   WidthRequest="150" Style="{DynamicResource blockLabel  }"/>
+                            <Label Text="Learn about social anxiety" LineBreakMode="WordWrap"  WidthRequest="150" Style="{DynamicResource blockLabel  }"/>
+                        </VerticalStackLayout>
+                    </HorizontalStackLayout>
+                </Border>
+
+                <Border HeightRequest="120" StrokeShape="RoundRectangle 20" Stroke="Beige">
+                    <HorizontalStackLayout ClassId="Chapter2">
+                        <HorizontalStackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                        </HorizontalStackLayout.GestureRecognizers>
+
+                        <Image Source="imagem.jpg" WidthRequest="100" HeightRequest="100"/>
+                        <VerticalStackLayout Padding="10,0,0,0" VerticalOptions="Center">
+                            <Label Text="Your new self" FontAttributes="Bold" WidthRequest="150" LineBreakMode="WordWrap"/>
+                            <Label Text="Learn how to visual your new self" LineBreakMode="WordWrap"  WidthRequest="150"/>
+                        </VerticalStackLayout>
+                    </HorizontalStackLayout>
+                </Border>
 
 
-                <Image Source="imagem.jpg" WidthRequest="100" HeightRequest="100"/>
-                <VerticalStackLayout Padding="10,0,0,0" VerticalOptions="Center">
+                <Border HeightRequest="120" StrokeShape="RoundRectangle 20" Stroke="Beige">
+                    <HorizontalStackLayout ClassId="Chapter3">
+                        <HorizontalStackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                        </HorizontalStackLayout.GestureRecognizers>
+                        <Image Source="imagem.jpg" WidthRequest="100" HeightRequest="100"/>
+                        <VerticalStackLayout Padding="10,0,0,0" VerticalOptions="Center">
+                            <Label Text="The power of thoughts" FontAttributes="Bold" LineBreakMode="TailTruncation" 
+                   WidthRequest="150"/>
+                            <Label Text="Learn how to work with your thoughts" LineBreakMode="WordWrap"  WidthRequest="150"/>
+                        </VerticalStackLayout>
+                    </HorizontalStackLayout>
+                </Border>
 
-                    <Label Text="Overcome" FontAttributes="Bold" WidthRequest="150" LineBreakMode="WordWrap"/>
+                <Border HeightRequest="120" StrokeShape="RoundRectangle 20" Stroke="Beige">
+                    <HorizontalStackLayout ClassId="Chapter4">
+                        <HorizontalStackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                        </HorizontalStackLayout.GestureRecognizers>
+                        <Image Source="imagem.jpg" WidthRequest="100" HeightRequest="100"/>
+                        <VerticalStackLayout Padding="10,0,0,0" VerticalOptions="Center">
+                            <Label Text="Facing your fears" FontAttributes="Bold" LineBreakMode="TailTruncation" 
+   WidthRequest="150"/>
+                            <Label Text="Conquer your fears and feel social freedom" LineBreakMode="WordWrap"  WidthRequest="150"/>
+                        </VerticalStackLayout>
+                    </HorizontalStackLayout>
+                </Border>
 
-                    <Label Text="Here's your summary for today:" />
+                <Border HeightRequest="120" StrokeShape="RoundRectangle 20" Stroke="Beige">
+                    <HorizontalStackLayout ClassId="Chapter5">
+                        <HorizontalStackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                        </HorizontalStackLayout.GestureRecognizers>
+                        <Image Source="imagem.jpg" WidthRequest="100" HeightRequest="100"/>
+                        <VerticalStackLayout Padding="10,0,0,0" VerticalOptions="Center">
+                            <Label Text="Hug your inner self" FontAttributes="Bold" LineBreakMode="TailTruncation" 
+WidthRequest="150"/>
+                            <Label Text="Learn how to love yourself and accept yourself as you are" LineBreakMode="WordWrap"  WidthRequest="150"/>
+                        </VerticalStackLayout>
+                    </HorizontalStackLayout>
+                </Border>
 
-                </VerticalStackLayout>
+                <Border HeightRequest="120" StrokeShape="RoundRectangle 20" Stroke="Beige">
+                    <HorizontalStackLayout ClassId="Chapter6">
+                        <HorizontalStackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                        </HorizontalStackLayout.GestureRecognizers>
+                        <Image Source="imagem.jpg" WidthRequest="100" HeightRequest="100"/>
+                        <VerticalStackLayout Padding="10,0,0,0" VerticalOptions="Center">
+                            <Label Text="Healthy body, healthy mind" FontAttributes="Bold" LineBreakMode="TailTruncation" 
+WidthRequest="150"/>
+                            <Label Text="Improve your lifestyle to tackle down social anxiety" LineBreakMode="WordWrap"  WidthRequest="150"/>
+                        </VerticalStackLayout>
+                    </HorizontalStackLayout>
+                </Border>
 
+            </VerticalStackLayout>
 
-            </HorizontalStackLayout>
-
-
-        </VerticalStackLayout>
+        </Grid>
     </ScrollView>
 
 </ContentPage>

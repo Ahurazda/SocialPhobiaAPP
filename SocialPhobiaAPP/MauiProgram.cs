@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using CommunityToolkit.Maui;
+using CommunityToolkit.Maui.Core;
+using Microsoft.Extensions.Logging;
 
 namespace SocialPhobiaAPP
 {
@@ -9,6 +11,9 @@ namespace SocialPhobiaAPP
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
+                .UseMauiCommunityToolkit()
+                .UseMauiCommunityToolkitCore()
+                .UseMauiCommunityToolkitMediaElement(isAndroidForegroundServiceEnabled: true)
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");

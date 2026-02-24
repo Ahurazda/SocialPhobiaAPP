@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SocialPhobiaAPP.Pages.BreathingPage"
+             >
+    <VerticalStackLayout Padding="25,25" BackgroundColor="PowderBlue">
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="25"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            
+            <ImageButton Source="left_arrow.png" Clicked="BackButton_Clicked" Grid.Column="0" Grid.Row="0"/>
+
+        <VerticalStackLayout Spacing="60"   Grid.Column="1" Grid.Row="1">
+        <Label x:Name="InstructionLabel" 
+       Text="Get prepared..." 
+       FontSize="24" 
+       HorizontalOptions="Center" />
+
+                <Ellipse x:Name="BreathingCircle"
+         WidthRequest="110"
+         HeightRequest="110"
+         Stroke="White"
+         StrokeThickness="4"
+         HorizontalOptions="Center"  />
+        
+                <Button x:Name="BreathingButton" Text="Start the excercise" 
+        Clicked="StartBreathing_Clicked" 
+        BackgroundColor="#E9967A" 
+        TextColor="White" />
+            </VerticalStackLayout>
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>

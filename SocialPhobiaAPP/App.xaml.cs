@@ -1,10 +1,15 @@
-﻿namespace SocialPhobiaAPP
+﻿using SocialPhobiaAPP.ViewModels;
+using System.ComponentModel;
+
+namespace SocialPhobiaAPP
 {
     public partial class App : Application
     {
         public App()
         {
             InitializeComponent();
+
+          
         }
 
         protected override Window CreateWindow(IActivationState? activationState)

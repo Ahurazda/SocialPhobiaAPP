@@ -9,8 +9,9 @@ namespace SocialPhobiaAPP.Models
 {
     class Section
     {
-
         private string _title;
+        private string _chapterText;
+        private string _image;
 
         [JsonPropertyName("Title")]
         public string Title {
@@ -19,15 +20,11 @@ namespace SocialPhobiaAPP.Models
         
         }
 
-        private string _chapterText;
-
         [JsonPropertyName("ChapterText")]
         public string ChapterText { 
             get => _chapterText;
             set { _chapterText = value; }
         }
-
-        private string _image;
 
         [JsonPropertyName("Image")]
         public string Image

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="SocialPhobiaAPP.Pages.MeditationPage"
+             >
+    <VerticalStackLayout Padding="25,25" Background="PowderBlue">
+        
+        
+        <ImageButton Source="left_arrow.png" Clicked="BackButton_Clicked" WidthRequest="25" HeightRequest="25" HorizontalOptions="Start"/>
+        <Label Text="Meditation" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" Margin="0,20"/>
+        
+        <toolkit:MediaElement x:Name="mediaElement" Source="embed://meditation.mp3" BackgroundColor="Beige" 
+              MaximumHeightRequest="400" 
+              ShouldShowPlaybackControls="True" />
+        
+    </VerticalStackLayout>
+</ContentPage>

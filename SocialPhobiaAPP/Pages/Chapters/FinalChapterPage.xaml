@@ -3,9 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SocialPhobiaAPP.Pages.Chapters.FinalChapterPage"
              >
-    <VerticalStackLayout Spacing="10">
-        <Image Source="check.png" HorizontalOptions="Center" HeightRequest="200" />
-        <Label Text="Congratulations! You have completed the final chapter." HorizontalOptions="Center" FontAttributes="Bold" Margin="0,20,0,0"/>
-        <Button Text="Finish chapter" Clicked="FinishButton_Clicked" HorizontalOptions="Center"/>
+    <VerticalStackLayout Spacing="25" Padding="25, 50, 25 , 0">
+        <Image Source="check.png" HorizontalOptions="Center" HeightRequest="150" />
+        <Label Text="Congratulations! You have completed the final chapter." HorizontalOptions="Center" FontAttributes="Bold"/>
+        <Button Text="Go home" Clicked="FinishButton_Clicked" Padding="15" BackgroundColor="#E9967A"/>
     </VerticalStackLayout>
 </ContentPage>

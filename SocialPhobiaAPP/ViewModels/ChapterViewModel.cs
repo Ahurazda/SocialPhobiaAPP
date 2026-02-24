@@ -93,17 +93,14 @@ namespace SocialPhobiaAPP.ViewModels
             => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
                 
 
-
-      
-
         public async void LoadChapterByName(string name)
         {
-            //vytáhni číslo z názvu kapitoly
             int number = int.Parse(string.Concat(name.Where(char.IsDigit)));
 
-            string chapterText = await ChapterTextReader.LoadChapter(number);
-            sections = JsonConvert.DeserializeObject<ObservableCollection<Section>>(chapterText);
-            Index = 0; // Reset indexu na začátek kapitoly
+            var chapterText = await ChapterTextReader.LoadChapter(number) ?? string.Empty;
+            sections = JsonConvert.DeserializeObject<ObservableCollection<Section>>(chapterText)
+                       ?? new ObservableCollection<Section>();
+            Index = 0; 
             Progress = 0;
             UpdateSection();
         }

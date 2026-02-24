@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SocialPhobiaAPP.Pages.TechniquesPage"
+             >
+    <VerticalStackLayout>
+        <Grid Padding="25, 25">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+
+            <VerticalStackLayout Spacing="5" Grid.Row="1" Grid.Column="0">
+                <Image Source="breath2.png" WidthRequest="125" HeightRequest="150" >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnImageTapped" 
+                              NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Label Text="4-7-8 Breathing" FontAttributes="Bold" HorizontalOptions="Center"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Spacing="5" Grid.Row="1" Grid.Column="1">
+            <Image Source="meditation.jpg" WidthRequest="125" HeightRequest="150" >
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnImageTapped1" 
+                    NumberOfTapsRequired="1" />
+                </Image.GestureRecognizers>
+                
+            </Image>
+                <Label Text="Meditation" FontAttributes="Bold" HorizontalOptions="Center"/>
+            </VerticalStackLayout>
+
+
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>
