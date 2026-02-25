@@ -9,7 +9,7 @@
         
         <ImageButton Source="left_arrow.png" Clicked="BackButton_Clicked" HorizontalOptions="Start" HeightRequest="50" WidthRequest="50"/>
         <Label Text="Settings" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" Margin="0,20"/>
-        <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
+        <HorizontalStackLayout Spacing="10" BackgroundColor="WhiteSmoke" VerticalOptions="Center">
             <Label Text="Dark theme:"  />
             <Switch x:Name="themeSwitch" Toggled="DarkThemeToggled" IsToggled="False"  HorizontalOptions="End"/>
         </HorizontalStackLayout>

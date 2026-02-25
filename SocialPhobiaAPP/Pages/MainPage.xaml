@@ -6,7 +6,7 @@
 
     <ContentPage.Resources>
         <Style TargetType="HorizontalStackLayout">
-            <Setter Property="BackgroundColor" Value="PowderBlue"/>
+            <Setter Property="BackgroundColor" Value="AliceBlue"/>
             <Setter Property="Padding" Value="10"/>
             <Setter Property="HeightRequest" Value="130"/>
         </Style>
@@ -14,16 +14,15 @@
     </ContentPage.Resources>
 
     <ScrollView>
-        <Grid>
+        <Grid RowSpacing="50">
             <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="50"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <HorizontalStackLayout BackgroundColor="DarkSalmon" Grid.Row="0">
-                <Label Text=" Mind Health" FontAttributes="Bold" FontSize="20"  />
-                <ImageButton Source="settings.png" WidthRequest="10"
-             HeightRequest="10"  Clicked="SettingsButton_Clicked"/>
+            <HorizontalStackLayout BackgroundColor="PowderBlue" Grid.Row="0" >
+                <Label Text="Resocialize" FontAttributes="Bold" FontSize="20" VerticalOptions="Center"/>
+                <ImageButton Source="settings.png" WidthRequest="10" HeightRequest="10" Clicked="SettingsButton_Clicked" />
             </HorizontalStackLayout>
 
             <VerticalStackLayout Spacing="20" Padding="10" Margin="10,0,10,0" Grid.Row="1">
@@ -36,11 +35,9 @@
                         <HorizontalStackLayout.GestureRecognizers>
                             <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
                         </HorizontalStackLayout.GestureRecognizers>
-
-                        <Image Source="chapter1.png" WidthRequest="100" HeightRequest="100"/>
+                        <Image Source="social_anxiety.svg" WidthRequest="100" HeightRequest="100"/>
                         <VerticalStackLayout Padding="10,0,0,0" VerticalOptions="Center">
                             <Label Text="What is social anxiety? " FontAttributes="Bold" LineBreakMode="WordWrap" 
-                                   
                                    WidthRequest="150" Style="{DynamicResource blockLabel  }"/>
                             <Label Text="Learn about social anxiety" LineBreakMode="WordWrap"  WidthRequest="150" Style="{DynamicResource blockLabel  }"/>
                         </VerticalStackLayout>
@@ -53,7 +50,7 @@
                             <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
                         </HorizontalStackLayout.GestureRecognizers>
 
-                        <Image Source="imagem.jpg" WidthRequest="100" HeightRequest="100"/>
+                        <Image Source="new_self.svg" WidthRequest="100" HeightRequest="100"/>
                         <VerticalStackLayout Padding="10,0,0,0" VerticalOptions="Center">
                             <Label Text="Your new self" FontAttributes="Bold" WidthRequest="150" LineBreakMode="WordWrap"/>
                             <Label Text="Learn how to visual your new self" LineBreakMode="WordWrap"  WidthRequest="150"/>
@@ -67,7 +64,7 @@
                         <HorizontalStackLayout.GestureRecognizers>
                             <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
                         </HorizontalStackLayout.GestureRecognizers>
-                        <Image Source="imagem.jpg" WidthRequest="100" HeightRequest="100"/>
+                        <Image Source="thoughts.svg" WidthRequest="100" HeightRequest="100"/>
                         <VerticalStackLayout Padding="10,0,0,0" VerticalOptions="Center">
                             <Label Text="The power of thoughts" FontAttributes="Bold" LineBreakMode="WordWrap" 
                    WidthRequest="150"/>
@@ -81,7 +78,7 @@
                         <HorizontalStackLayout.GestureRecognizers>
                             <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
                         </HorizontalStackLayout.GestureRecognizers>
-                        <Image Source="imagem.jpg" WidthRequest="100" HeightRequest="100"/>
+                        <Image Source="face_fears.svg" WidthRequest="100" HeightRequest="100"/>
                         <VerticalStackLayout Padding="10,0,0,0" VerticalOptions="Center">
                             <Label Text="Facing your fears" FontAttributes="Bold" LineBreakMode="WordWrap" 
    WidthRequest="150"/>
@@ -95,7 +92,7 @@
                         <HorizontalStackLayout.GestureRecognizers>
                             <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
                         </HorizontalStackLayout.GestureRecognizers>
-                        <Image Source="imagem.jpg" WidthRequest="100" HeightRequest="100"/>
+                        <Image Source="love.svg" WidthRequest="100" HeightRequest="100"/>
                         <VerticalStackLayout Padding="10,0,0,0" VerticalOptions="Center">
                             <Label Text="Hug your inner self" FontAttributes="Bold" LineBreakMode="WordWrap" 
 WidthRequest="150"/>
@@ -109,7 +106,7 @@ WidthRequest="150"/>
                         <HorizontalStackLayout.GestureRecognizers>
                             <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
                         </HorizontalStackLayout.GestureRecognizers>
-                        <Image Source="imagem.jpg" WidthRequest="100" HeightRequest="100"/>
+                        <Image Source="lifestyle.svg" WidthRequest="100" HeightRequest="100"/>
                         <VerticalStackLayout Padding="10,0,0,0" VerticalOptions="Center">
                             <Label Text="Healthy body, healthy mind" FontAttributes="Bold" LineBreakMode="WordWrap" 
 WidthRequest="150"/>

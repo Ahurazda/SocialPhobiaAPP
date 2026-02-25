@@ -15,16 +15,19 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
-
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
+        <Label Text="My Diary" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" Grid.Column="1" Grid.Row="0"/>
+
         <ImageButton Source="add.png"  WidthRequest="50" HeightRequest="50" ToolTipProperties.Text="Add a new diary entry" Clicked="ImageButton_Clicked" HorizontalOptions="Start" 
                      Grid.Column="0" Grid.Row="1"/>
-        <Label Text="My Diary" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" Grid.Column="1" Grid.Row="0"/>
+
         
-        <Image x:Name="emptyDiaryImage" Source="empty_diary_image.png" IsVisible="False" HeightRequest="200" WidthRequest="200" Grid.Column="1" Grid.Row="3"/>
-        <Label x:Name="emptinessIndicator" Text="You have no entries so far." IsVisible="False" Grid.Column="1" Grid.Row="3"/>
+        <Image x:Name="emptyDiaryImage" Source="empty_diary_image.png" IsVisible="False" HeightRequest="150" WidthRequest="150" VerticalOptions="Start"  Grid.Column="1" Grid.Row="3"/>
+
+        <Label x:Name="emptinessIndicator" Text="You have no entries so far." IsVisible="False" FontSize="20" HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="1" Grid.Row="3"/>
+
         <CollectionView ItemsSource="{Binding DiaryEntries }"  Grid.Column="1" Grid.Row="3">
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="models:JournalEntry">

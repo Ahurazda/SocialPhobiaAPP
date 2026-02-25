@@ -5,7 +5,7 @@
              >
     <ScrollView>
         <VerticalStackLayout>
-            <Grid Padding="25,25" BackgroundColor="AliceBlue">
+            <Grid Padding="30,30" BackgroundColor="AliceBlue">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="25"/>   
                         <RowDefinition Height="auto"/>

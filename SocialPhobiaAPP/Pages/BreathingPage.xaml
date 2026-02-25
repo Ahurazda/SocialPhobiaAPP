@@ -7,18 +7,18 @@
 
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="25"/>
+                <ColumnDefinition Width="30"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             
             <Grid.RowDefinitions>
-                <RowDefinition Height="25"/>
+                <RowDefinition Height="30"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             
             <ImageButton Source="left_arrow.png" Clicked="BackButton_Clicked" Grid.Column="0" Grid.Row="0"/>
 
-        <VerticalStackLayout Spacing="60"   Grid.Column="1" Grid.Row="1">
+        <VerticalStackLayout Spacing="70" Margin="0,70,0,0" Grid.Column="1" Grid.Row="1">
         <Label x:Name="InstructionLabel" 
        Text="Get prepared..." 
        FontSize="24" 

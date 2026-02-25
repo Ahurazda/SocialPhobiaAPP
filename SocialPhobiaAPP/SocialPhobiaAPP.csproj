@@ -21,7 +21,7 @@
 		<Nullable>enable</Nullable>
 
 		<!-- Display name -->
-		<ApplicationTitle>SocialPhobiaMate</ApplicationTitle>
+		<ApplicationTitle>Resocialize</ApplicationTitle>
 
 		<!-- App Identifier -->
 		<ApplicationId>com.companyname.socialphobiaapp</ApplicationId>
