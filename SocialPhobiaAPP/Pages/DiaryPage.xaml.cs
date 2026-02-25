@@ -27,6 +27,21 @@ public partial class DiaryPage : ContentPage
         
     }
 
+    private void setVisibility()
+    {
+        if (DiaryEntries.Count != 0)
+        {
+
+            emptinessIndicator.IsVisible = false;
+            emptyDiaryImage.IsVisible = false;
+        }
+        else
+        {
+            emptinessIndicator.IsVisible = true;
+            emptyDiaryImage.IsVisible = true;
+        }
+    }
+
     private async Task LoadEntries()
     {
         var entries = await databaseService.GetEntriesAsync();
@@ -35,10 +50,8 @@ public partial class DiaryPage : ContentPage
         {
             DiaryEntries.Add(entry);
         }
-        
-        
-        EmptinessIndicator.IsVisible =  (DiaryEntries.Count != 0) ? false: true;
-        
+
+        setVisibility();
     }
 
     private async void ImageButton_Clicked(object sender, EventArgs e)
@@ -55,6 +68,8 @@ public partial class DiaryPage : ContentPage
             if ( entryToDelete == null) return;                                         // If not found, method terminates
 
             DiaryEntries.Remove(entryToDelete);                                         // Deletes item from ObservableCollection, which results in UI change
+
+            setVisibility();
             notifytheUser();
             await databaseService.DeleteEntryAsync(entryToDelete);                      // Deletes item from database
         }

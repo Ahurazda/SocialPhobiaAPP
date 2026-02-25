@@ -5,9 +5,9 @@
              >
     <ScrollView>
         <VerticalStackLayout>
-            <Grid Padding="25,0">
+            <Grid Padding="25,25" BackgroundColor="AliceBlue">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="75"/>   
+                        <RowDefinition Height="25"/>   
                         <RowDefinition Height="auto"/>
                         <RowDefinition Height="100"/>
                         <RowDefinition Height="*"/>
@@ -20,10 +20,12 @@
                     </Grid.ColumnDefinitions>
 
                     <ImageButton Source="left_arrow.png" Clicked="ImageButton_Clicked" Grid.Column="0" Grid.Row="0"/>
-                    <Label x:Name="LabelText" FontAttributes="Bold" HorizontalOptions="Center" Grid.Column="1" Grid.Row="1"/>
-                    <Entry x:Name="TitleEntry" Placeholder="Enter the name of the entry:" MaxLength="25" HeightRequest="10" BackgroundColor="Beige" Grid.Column="1" Grid.Row="2"/>
-                    <Editor x:Name="ContentEditor" Placeholder="Write the text of your entry here..." MaxLength="500" AutoSize="Disabled" HeightRequest="250" BackgroundColor="Beige"  Grid.Column="1" Grid.Row="3"/>
-                    <Button Text="Save" BackgroundColor="Navy" Clicked="SaveButton_Clicked" Padding="15" Margin="0,20,0,0" Grid.Column="1" Grid.Row="4"/>
+                    <Label x:Name="LabelText" FontAttributes="Bold" HorizontalOptions="Center" Grid.Column="1" Grid.Row="0"/>
+                
+                    <Entry x:Name="TitleEntry" Placeholder="Enter the name of the entry:" MaxLength="25" HeightRequest="10" BackgroundColor="White" Grid.Column="1" Grid.Row="2"/>
+                    <Editor x:Name="ContentEditor" Placeholder="Write the text of your entry here..." MaxLength="500" AutoSize="Disabled" HeightRequest="300" BackgroundColor="White"  Grid.Column="1" Grid.Row="3"/>
+                    <Button Text="Save" BackgroundColor="DarkSalmon" Clicked="SaveButton_Clicked" Padding="15" Margin="0,20,0,0" Grid.Column="1" Grid.Row="4"/>
+                
                 </Grid>
       
         </VerticalStackLayout>

@@ -17,7 +17,8 @@ namespace SocialPhobiaAPP
             Routing.RegisterRoute(nameof(MeditationPage), typeof(MeditationPage));
             Routing.RegisterRoute(nameof(ChapterPage), typeof(ChapterPage)); 
             Routing.RegisterRoute(nameof(FinalChapterPage), typeof(FinalChapterPage)); 
-            
+            Routing.RegisterRoute(nameof(ExpositionsPage), typeof(ExpositionsPage));
+
         }
     }
 }

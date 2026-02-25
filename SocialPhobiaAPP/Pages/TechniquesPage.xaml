@@ -16,7 +16,7 @@
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
 
-
+            
             <VerticalStackLayout Spacing="5" Grid.Row="1" Grid.Column="0">
                 <Image Source="breath2.png" WidthRequest="125" HeightRequest="150" >
                     <Image.GestureRecognizers>
@@ -29,13 +29,23 @@
 
             <VerticalStackLayout Spacing="5" Grid.Row="1" Grid.Column="1">
             <Image Source="meditation.jpg" WidthRequest="125" HeightRequest="150" >
-                <Image.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="OnImageTapped1" 
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnImageTapped1" 
                     NumberOfTapsRequired="1" />
-                </Image.GestureRecognizers>
-                
-            </Image>
+                    </Image.GestureRecognizers>
+                </Image>
                 <Label Text="Meditation" FontAttributes="Bold" HorizontalOptions="Center"/>
+            </VerticalStackLayout>
+
+
+            <VerticalStackLayout Spacing="5" Grid.Row="2" Grid.Column="0">
+                <Image Source="meditation.jpg" WidthRequest="125" HeightRequest="150" >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnImageTapped2" 
+                    NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Label Text="Challenges" FontAttributes="Bold" HorizontalOptions="Center"/>
             </VerticalStackLayout>
 
 

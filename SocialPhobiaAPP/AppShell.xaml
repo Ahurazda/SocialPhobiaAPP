@@ -26,4 +26,5 @@
     <ShellContent Route="editorDiaryPage" ContentTemplate="{DataTemplate local:EditorDiaryPage}" />
     <ShellContent Route="breathingPage" ContentTemplate="{DataTemplate local:BreathingPage}" />
     <ShellContent Route="meditationPage" ContentTemplate="{DataTemplate local:MeditationPage}"/>
+    <ShellContent Route="expositionsPage" ContentTemplate="{DataTemplate local:ExpositionsPage}"/>
 </Shell>

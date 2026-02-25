@@ -17,4 +17,9 @@ public partial class TechniquesPage : ContentPage
 	{
 		await Shell.Current.GoToAsync("//meditationPage");
 	}
+
+	private async void OnImageTapped2(object sender, EventArgs e)
+	{
+		await Shell.Current.GoToAsync("//expositionsPage");
+    }
 }
