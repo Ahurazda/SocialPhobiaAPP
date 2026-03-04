@@ -12,7 +12,7 @@ public partial class EditorDiaryPage : ContentPage
 {
 
 
-    DatabaseService databaseService;
+    private readonly DatabaseService databaseService;
     private JournalEntry _journalEntryToEdit;
     public JournalEntry JournalEntryToEdit
     {

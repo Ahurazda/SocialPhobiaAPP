@@ -43,10 +43,10 @@
 
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appicon.svg" Color="PowderBlue" />
+		<MauiIcon Include="Resources\AppIcon\appicon.png" Color="White" />
 
 		<!-- Splash Screen #512BD4 -->
-		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="PowderBlue" BaseSize="128,128" />
+		<MauiSplashScreen Include="Resources\Splash\splash.png" Color="PowderBlue" BaseSize="128,128" />
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
@@ -85,6 +85,9 @@
 	  <Compile Update="Pages\Chapters\ChapterPage.xaml.cs">
 	    <DependentUpon>ChapterPage.xaml</DependentUpon>
 	  </Compile>
+	  <Compile Update="Resources\Styles\Styles1.xaml.cs">
+	    <DependentUpon>Styles1.xaml</DependentUpon>
+	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
@@ -118,10 +121,10 @@
 	  <MauiXaml Update="Pages\TechniquesPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Resources\Themes\DarkTheme.xaml">
+	  <MauiXaml Update="Resources\Styles\Colors1.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Resources\Themes\LightTheme.xaml">
+	  <MauiXaml Update="Resources\Styles\Styles1.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

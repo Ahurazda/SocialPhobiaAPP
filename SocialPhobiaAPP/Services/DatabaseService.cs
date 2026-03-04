@@ -4,48 +4,62 @@ using SQLite;
 
 namespace SocialPhobiaAPP.Services
 {
-    public class DatabaseService
+    public sealed class DatabaseService
     {
-        private SQLiteAsyncConnection? _database;
+        private SQLiteAsyncConnection _database;
+        private readonly Task _initTask;
 
-        async Task Init()
+        public DatabaseService()
         {
-            if (_database is not null) return;
-
             var dbPath = Path.Combine(FileSystem.AppDataDirectory, "MyJournal.db3");
-
             _database = new SQLiteAsyncConnection(dbPath);
-            await _database.CreateTableAsync<JournalEntry>();
+
+            _initTask = InitializeAsync();
         }
 
         public async Task<List<JournalEntry>> GetEntriesAsync()
         {
-            await Init();
+            await EnsureInitializedAsync();
             return await _database.Table<JournalEntry>().ToListAsync();
+        }
+
+        private async Task EnsureInitializedAsync()
+        {
+            await _initTask;
+        }
+        private async Task InitializeAsync()
+        {
+            await _database.CreateTableAsync<JournalEntry>();
         }
 
         public async Task SaveEntryAsync(JournalEntry entry)
         {
-            await Init();
-            await _database.InsertAsync(entry);
+            await EnsureInitializedAsync();
+            // Pokud záznam už má ID, aktualizujeme, jinak vložíme nový
+            if (entry.ID != 0)
+                await _database.UpdateAsync(entry);
+            else
+                await _database.InsertAsync(entry);
         }
 
         public async Task DeleteEntryAsync(JournalEntry entry)
         {
-            await Init();
+            await EnsureInitializedAsync();
             await _database.DeleteAsync(entry);
         }
 
         public async Task UpdateEntryAsync(JournalEntry entry)
         {
-            
+            await EnsureInitializedAsync();
             await _database.UpdateAsync(entry);
         }
 
         public async Task ClearAllEntriesAsync()
         {
-            await Init();
+            await EnsureInitializedAsync();
             await _database.DeleteAllAsync<JournalEntry>();
         }
     }
-} 
+
+}
+

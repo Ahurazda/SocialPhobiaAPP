@@ -20,15 +20,15 @@ public partial class SettingsPage : ContentPage
 
      void DarkThemeToggled(object sender, ToggledEventArgs e)
 	{
-		
-        if (e.Value)
-		{
-			App.Current.UserAppTheme = AppTheme.Dark;
-		}
-		else
-		{
-			App.Current.UserAppTheme = AppTheme.Light;
-		}
+
+        Application.Current.UserAppTheme = Application.Current.UserAppTheme switch
+        {
+            AppTheme.Light => AppTheme.Dark,
+            AppTheme.Dark => AppTheme.Light,
+            _ => AppTheme.Dark,
+            
+        };
+
     }
 
 		

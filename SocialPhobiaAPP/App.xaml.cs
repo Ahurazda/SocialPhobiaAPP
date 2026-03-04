@@ -1,6 +1,6 @@
-﻿using SocialPhobiaAPP.ViewModels;
+﻿using SocialPhobiaAPP.Resources.Styles;
+using SocialPhobiaAPP.ViewModels;
 using System.ComponentModel;
-
 namespace SocialPhobiaAPP
 {
     public partial class App : Application
@@ -9,8 +9,16 @@ namespace SocialPhobiaAPP
         {
             InitializeComponent();
 
-          
+            Current.RequestedThemeChanged += OnThemeChanged;
         }
+
+        
+        private void OnThemeChanged(object? sender, AppThemeChangedEventArgs e)
+        {
+            
+            
+        }
+        
 
         protected override Window CreateWindow(IActivationState? activationState)
         {

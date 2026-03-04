@@ -18,7 +18,7 @@
 
             
             <VerticalStackLayout Spacing="5" Grid.Row="1" Grid.Column="0">
-                <Image Source="breath2.png" WidthRequest="125" HeightRequest="150" >
+                <Image Source="breathing.svg" WidthRequest="180" HeightRequest="180" >
                     <Image.GestureRecognizers>
                         <TapGestureRecognizer Tapped="OnImageTapped" 
                               NumberOfTapsRequired="1" />
@@ -28,7 +28,7 @@
             </VerticalStackLayout>
 
             <VerticalStackLayout Spacing="5" Grid.Row="1" Grid.Column="1">
-            <Image Source="meditate.svg" WidthRequest="125" HeightRequest="150" >
+            <Image Source="meditate.svg" WidthRequest="180" HeightRequest="180" >
                     <Image.GestureRecognizers>
                         <TapGestureRecognizer Tapped="OnImageTapped1" 
                     NumberOfTapsRequired="1" />
@@ -39,7 +39,7 @@
 
 
             <VerticalStackLayout Spacing="5" Grid.Row="2" Grid.Column="0">
-                <Image Source="challenge.png" WidthRequest="125" HeightRequest="150" >
+                <Image Source="challenge.svg" WidthRequest="180" HeightRequest="180" >
                     <Image.GestureRecognizers>
                         <TapGestureRecognizer Tapped="OnImageTapped2" 
                     NumberOfTapsRequired="1" />

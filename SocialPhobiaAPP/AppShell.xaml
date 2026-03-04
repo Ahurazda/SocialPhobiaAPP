@@ -15,7 +15,7 @@
         <Tab Icon="diary.png" Title="Diary">
             <ShellContent ContentTemplate="{DataTemplate local:DiaryPage}" Route="diaryPage" />
         </Tab>
-        <Tab Icon="lotus.png" Title="Relaxation">
+        <Tab Icon="compass.png" Title="Discover">
             <ShellContent ContentTemplate="{DataTemplate local:TechniquesPage}" Route="techniquesPage" />
         </Tab>
     </TabBar>

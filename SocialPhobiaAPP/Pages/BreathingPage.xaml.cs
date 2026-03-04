@@ -65,7 +65,6 @@ public partial class BreathingPage : ContentPage
     private async void StopBreathingLogic()
     {
         _cts?.Cancel();
-        _cts = null;
         _isAnimating = false;
 
         BreathingCircle.CancelAnimations();

@@ -16,14 +16,23 @@
     <ScrollView>
         <Grid RowSpacing="50">
             <Grid.RowDefinitions>
-                <RowDefinition Height="50"/>
+                <RowDefinition Height="80"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <HorizontalStackLayout BackgroundColor="PowderBlue" Grid.Row="0" >
-                <Label Text="Resocialize" FontAttributes="Bold" FontSize="20" VerticalOptions="Center"/>
-                <ImageButton Source="settings.png" WidthRequest="10" HeightRequest="10" Clicked="SettingsButton_Clicked" />
-            </HorizontalStackLayout>
+            <Grid BackgroundColor="PowderBlue" Padding="10" Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        
+                    </Grid.ColumnDefinitions>
+
+                <Label Text="Resocialize" FontAttributes="Bold" FontSize="20" VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="0"/>
+                <ImageButton Source="settings.png" WidthRequest="5" HeightRequest="5" Clicked="SettingsButton_Clicked" VerticalOptions="Center" HorizontalOptions="End" Grid.Column="1"/>
+                    
+                    
+                </Grid>
+            
 
             <VerticalStackLayout Spacing="20" Padding="10" Margin="10,0,10,0" Grid.Row="1">
 
@@ -44,7 +53,7 @@
                     </HorizontalStackLayout>
                 </Border>
 
-                <Border HeightRequest="120" StrokeShape="RoundRectangle 20" Stroke="Beige">
+                <Border HeightRequest="120" StrokeShape="RoundRectangle 20" Stroke="AliceBlue">
                     <HorizontalStackLayout ClassId="Chapter2">
                         <HorizontalStackLayout.GestureRecognizers>
                             <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
@@ -52,14 +61,14 @@
 
                         <Image Source="new_self.svg" WidthRequest="100" HeightRequest="100"/>
                         <VerticalStackLayout Padding="10,0,0,0" VerticalOptions="Center">
-                            <Label Text="Your new self" FontAttributes="Bold" WidthRequest="150" LineBreakMode="WordWrap"/>
-                            <Label Text="Learn how to visual your new self" LineBreakMode="WordWrap"  WidthRequest="150"/>
+                            <Label Text="Your new self" FontAttributes="Bold" WidthRequest="150" LineBreakMode="WordWrap" Style="{DynamicResource blockLabel  }"/>
+                            <Label Text="Learn how to visual your new self" LineBreakMode="WordWrap"  WidthRequest="150" Style="{DynamicResource blockLabel  }"/>
                         </VerticalStackLayout>
                     </HorizontalStackLayout>
                 </Border>
 
 
-                <Border HeightRequest="120" StrokeShape="RoundRectangle 20" Stroke="Beige">
+                <Border HeightRequest="120" StrokeShape="RoundRectangle 20" Stroke="AliceBlue">
                     <HorizontalStackLayout ClassId="Chapter3">
                         <HorizontalStackLayout.GestureRecognizers>
                             <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
@@ -67,13 +76,13 @@
                         <Image Source="thoughts.svg" WidthRequest="100" HeightRequest="100"/>
                         <VerticalStackLayout Padding="10,0,0,0" VerticalOptions="Center">
                             <Label Text="The power of thoughts" FontAttributes="Bold" LineBreakMode="WordWrap" 
-                   WidthRequest="150"/>
-                            <Label Text="Learn how to work with your thoughts" LineBreakMode="WordWrap"  WidthRequest="150"/>
+                   WidthRequest="150" Style="{DynamicResource blockLabel  }" />
+                            <Label Text="Learn how to work with your thoughts" LineBreakMode="WordWrap"  WidthRequest="150" Style="{DynamicResource blockLabel  }" />
                         </VerticalStackLayout>
                     </HorizontalStackLayout>
                 </Border>
 
-                <Border HeightRequest="120" StrokeShape="RoundRectangle 20" Stroke="Beige">
+                <Border HeightRequest="120" StrokeShape="RoundRectangle 20" Stroke="AliceBlue">
                     <HorizontalStackLayout ClassId="Chapter4">
                         <HorizontalStackLayout.GestureRecognizers>
                             <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
@@ -81,13 +90,13 @@
                         <Image Source="face_fears.svg" WidthRequest="100" HeightRequest="100"/>
                         <VerticalStackLayout Padding="10,0,0,0" VerticalOptions="Center">
                             <Label Text="Facing your fears" FontAttributes="Bold" LineBreakMode="WordWrap" 
-   WidthRequest="150"/>
-                            <Label Text="Conquer your fears and feel social freedom" LineBreakMode="WordWrap"  WidthRequest="150"/>
+   WidthRequest="150" Style="{DynamicResource blockLabel  }" />
+                            <Label Text="Conquer your fears and feel social freedom" LineBreakMode="WordWrap"  WidthRequest="150" Style="{DynamicResource blockLabel  }" />
                         </VerticalStackLayout>
                     </HorizontalStackLayout>
                 </Border>
 
-                <Border HeightRequest="120" StrokeShape="RoundRectangle 20" Stroke="Beige">
+                <Border HeightRequest="120" StrokeShape="RoundRectangle 20" Stroke="AliceBlue">
                     <HorizontalStackLayout ClassId="Chapter5">
                         <HorizontalStackLayout.GestureRecognizers>
                             <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
@@ -95,13 +104,13 @@
                         <Image Source="love.svg" WidthRequest="100" HeightRequest="100"/>
                         <VerticalStackLayout Padding="10,0,0,0" VerticalOptions="Center">
                             <Label Text="Hug your inner self" FontAttributes="Bold" LineBreakMode="WordWrap" 
-WidthRequest="150"/>
-                            <Label Text="Learn how to love yourself and accept yourself as you are" LineBreakMode="WordWrap"  WidthRequest="150"/>
+WidthRequest="150" Style="{DynamicResource blockLabel  }" />
+                            <Label Text="Learn how to love yourself and accept yourself as you are" LineBreakMode="WordWrap"  WidthRequest="150" Style="{DynamicResource blockLabel  }" />
                         </VerticalStackLayout>
                     </HorizontalStackLayout>
                 </Border>
 
-                <Border HeightRequest="120" StrokeShape="RoundRectangle 20" Stroke="Beige">
+                <Border HeightRequest="120" StrokeShape="RoundRectangle 20" Stroke="AliceBlue">
                     <HorizontalStackLayout ClassId="Chapter6">
                         <HorizontalStackLayout.GestureRecognizers>
                             <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
@@ -109,8 +118,8 @@ WidthRequest="150"/>
                         <Image Source="lifestyle.svg" WidthRequest="100" HeightRequest="100"/>
                         <VerticalStackLayout Padding="10,0,0,0" VerticalOptions="Center">
                             <Label Text="Healthy body, healthy mind" FontAttributes="Bold" LineBreakMode="WordWrap" 
-WidthRequest="150"/>
-                            <Label Text="Improve your lifestyle to tackle down social anxiety" LineBreakMode="WordWrap"  WidthRequest="150"/>
+WidthRequest="150" Style="{DynamicResource blockLabel  }" />
+                            <Label Text="Improve your lifestyle to tackle down social anxiety" LineBreakMode="WordWrap"  WidthRequest="150" Style="{DynamicResource blockLabel  }" />
                         </VerticalStackLayout>
                     </HorizontalStackLayout>
                 </Border>

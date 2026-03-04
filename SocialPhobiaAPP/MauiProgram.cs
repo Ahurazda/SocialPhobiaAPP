@@ -1,6 +1,7 @@
 ﻿using CommunityToolkit.Maui;
 using CommunityToolkit.Maui.Core;
 using Microsoft.Extensions.Logging;
+using SocialPhobiaAPP.Services;
 
 namespace SocialPhobiaAPP
 {
@@ -20,8 +21,11 @@ namespace SocialPhobiaAPP
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
+            // Register DatabaseService as a singleton
+            builder.Services.AddSingleton<DatabaseService>();
+
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
 
             return builder.Build();

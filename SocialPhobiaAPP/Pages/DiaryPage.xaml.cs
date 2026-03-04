@@ -10,11 +10,11 @@ public partial class DiaryPage : ContentPage
 {
     public ObservableCollection<JournalEntry> DiaryEntries { get; set; }
 
-    DatabaseService databaseService;
+    private readonly DatabaseService databaseService;
     public DiaryPage()
 	{
 		InitializeComponent();
-        
+
         databaseService = new DatabaseService();
         DiaryEntries = new ObservableCollection<JournalEntry>();
         BindingContext = this;
