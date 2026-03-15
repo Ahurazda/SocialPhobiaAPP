@@ -14,7 +14,7 @@
     </ContentPage.Resources>
 
     <ScrollView>
-        <Grid RowSpacing="50">
+        <Grid RowSpacing="10">
             <Grid.RowDefinitions>
                 <RowDefinition Height="80"/>
                 <RowDefinition Height="*"/>

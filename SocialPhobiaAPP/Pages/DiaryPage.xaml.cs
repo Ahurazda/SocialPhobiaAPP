@@ -27,7 +27,7 @@ public partial class DiaryPage : ContentPage
         
     }
 
-    private void setVisibility()
+    private void SetVisibility()
     {
         if (DiaryEntries.Count != 0)
         {
@@ -51,7 +51,7 @@ public partial class DiaryPage : ContentPage
             DiaryEntries.Add(entry);
         }
 
-        setVisibility();
+        SetVisibility();
     }
 
     private async void ImageButton_Clicked(object sender, EventArgs e)
@@ -69,13 +69,13 @@ public partial class DiaryPage : ContentPage
 
             DiaryEntries.Remove(entryToDelete);                                         // Deletes item from ObservableCollection, which results in UI change
 
-            setVisibility();
-            notifytheUser();
+            SetVisibility();
+            NotifytheUser();
             await databaseService.DeleteEntryAsync(entryToDelete);                      // Deletes item from database
         }
     }
 
-    private async void notifytheUser()
+    private async void NotifytheUser()
     {
         string text = "The diary entry was deleted.";
         ToastDuration duration = ToastDuration.Short; //cca 2 seconds
@@ -90,15 +90,14 @@ public partial class DiaryPage : ContentPage
     {
         if (sender is SwipeItem entry)
         {
-            var entryToEdit = entry.BindingContext as JournalEntry;                         // Získá položku, která je spojena s tímto SwipeItem
-
-            if (entryToEdit == null) return;                                                // Pokud není nalezena, ukonèí metodu
+            
+            if (entry.BindingContext is not JournalEntry entryToEdit) return;                                                // Pokud není nalezena, ukonèí metodu
 
             var navigationParameter = new Dictionary<string, object>
             {
-                { "Entry", entryToEdit }                                                    // Klíè je "Entry", hodnota je ten objekt
+                { "Entry", entryToEdit }                                                         // Klíè je "Entry", hodnota je ten objekt
             };
-                                                                                            // Navigujeme na stránku EditorPage
+                                                                                                    // Navigujeme na stránku EditorPage
             await Shell.Current.GoToAsync("//editorDiaryPage", navigationParameter);
         }
     }

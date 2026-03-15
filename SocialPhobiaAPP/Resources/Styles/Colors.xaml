@@ -22,7 +22,7 @@
     <Color x:Key="MutedCoral">#E9967A</Color>
     <Color x:Key="DustyRose">#DCAE96</Color>
     <Color x:Key="CreamWhite">#fffbf7</Color>
-
+    <Color x:Key="AliceBlue">AliceBlue</Color>
 
 
     <Color x:Key="Gray100">#E1E1E1</Color>

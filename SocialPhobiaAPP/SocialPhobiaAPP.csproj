@@ -85,9 +85,6 @@
 	  <Compile Update="Pages\Chapters\ChapterPage.xaml.cs">
 	    <DependentUpon>ChapterPage.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Resources\Styles\Styles1.xaml.cs">
-	    <DependentUpon>Styles1.xaml</DependentUpon>
-	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
@@ -119,12 +116,6 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\TechniquesPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Resources\Styles\Colors1.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Resources\Styles\Styles1.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

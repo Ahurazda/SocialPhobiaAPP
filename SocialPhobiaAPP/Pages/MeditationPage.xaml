@@ -4,15 +4,18 @@
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              x:Class="SocialPhobiaAPP.Pages.MeditationPage"
              >
-    <VerticalStackLayout Padding="25,25" Background="PowderBlue">
+    <Grid Padding="25" Background="PowderBlue" RowSpacing="60">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
         
-        
-        <ImageButton Source="left_arrow.png" Clicked="BackButton_Clicked" WidthRequest="25" HeightRequest="25" HorizontalOptions="Start"/>
-        <Label Text="Meditation" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" Margin="0,20"/>
+        <ImageButton Source="left_arrow.png" Clicked="BackButton_Clicked" WidthRequest="25" HeightRequest="25" HorizontalOptions="Start" Grid.Row="0"/>
+        <Label Text="Meditation" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="0"/>
         
         <toolkit:MediaElement x:Name="mediaElement" Source="embed://meditation.mp3" BackgroundColor="Beige" 
               MaximumHeightRequest="400" 
-              ShouldShowPlaybackControls="True" />
+              ShouldShowPlaybackControls="True" Grid.Row="1"/>
         
-    </VerticalStackLayout>
+    </Grid>
 </ContentPage>

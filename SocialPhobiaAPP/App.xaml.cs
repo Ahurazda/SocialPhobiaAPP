@@ -1,7 +1,4 @@
-﻿using SocialPhobiaAPP.Resources.Styles;
-using SocialPhobiaAPP.ViewModels;
-using System.ComponentModel;
-namespace SocialPhobiaAPP
+﻿namespace SocialPhobiaAPP
 {
     public partial class App : Application
     {

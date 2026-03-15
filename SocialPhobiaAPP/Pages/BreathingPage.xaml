@@ -16,7 +16,7 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             
-            <ImageButton Source="left_arrow.png" Clicked="BackButton_Clicked" Grid.Column="0" Grid.Row="0"/>
+           <ImageButton Source="left_arrow.png" Clicked="BackButton_Clicked"  Grid.Column="0" Grid.Row="0"/>
 
         <VerticalStackLayout Spacing="70" Margin="0,70,0,0" Grid.Column="1" Grid.Row="1">
         <Label x:Name="InstructionLabel" 

@@ -10,7 +10,7 @@ public partial class ChapterPage : ContentPage
 
 
     ChapterViewModel vm;
-    private string _name;
+    private string _name = string.Empty;
 
     public string Name
     {

@@ -4,8 +4,8 @@
              x:Class="SocialPhobiaAPP.Pages.EditorDiaryPage"
              >
     <ScrollView>
-        <VerticalStackLayout>
-            <Grid Padding="30,30" BackgroundColor="AliceBlue">
+        <VerticalStackLayout Style="{ AppThemeBinding Light={DynamicResource AliceBlue}, Dark={DynamicResource OffBlack}}">
+            <Grid Padding="30,30" >
                     <Grid.RowDefinitions>
                         <RowDefinition Height="25"/>   
                         <RowDefinition Height="auto"/>
@@ -20,7 +20,7 @@
                     </Grid.ColumnDefinitions>
 
                     <ImageButton Source="left_arrow.png" Clicked="ImageButton_Clicked" Grid.Column="0" Grid.Row="0"/>
-                    <Label x:Name="LabelText" FontAttributes="Bold" HorizontalOptions="Center" Grid.Column="1" Grid.Row="0"/>
+                    <Label x:Name="LabelText" FontAttributes="Bold" FontSize="18" HorizontalOptions="Center" Grid.Column="1" Grid.Row="0"/>
                 
                     <Entry x:Name="TitleEntry" Placeholder="Enter the name of the entry:" MaxLength="25" HeightRequest="10" BackgroundColor="White" Grid.Column="1" Grid.Row="2"/>
                     <Editor x:Name="ContentEditor" Placeholder="Write the text of your entry here..." MaxLength="500" AutoSize="Disabled" HeightRequest="300" BackgroundColor="White"  Grid.Column="1" Grid.Row="3"/>

@@ -14,24 +14,24 @@
         <ImageButton Source="left_arrow.png" WidthRequest="20" HeightRequest="20" Clicked="BackButton_Clicked" HorizontalOptions="Start" Margin="10,0,0,0" Grid.Row="0"/>
         <Label Text="Challenges" FontSize="20" FontAttributes="Bold" HorizontalOptions="Center" Grid.Row="0"/>
 
-        <CarouselView x:Name="carouselView" IndicatorView="indicatorView" Margin="10,50,10,10" PeekAreaInsets="20"   
-                    Grid.Row="1">
+        <CarouselView x:Name="carouselView" IndicatorView="indicatorView" Margin="10,50,10,10" 
+                      PeekAreaInsets="20" Grid.Row="1">
             <CarouselView.ItemTemplate>
-                    <DataTemplate>
+                <DataTemplate>
                     <Border VerticalOptions="Fill" 
                         Margin="10"
                         StrokeShape="RoundRectangle 30" Stroke="DarkSalmon">
                         <VerticalStackLayout BackgroundColor="DarkSalmon" Spacing="100" Padding="20">
-
-                            <Label Text="{Binding Difficulty, StringFormat='Difficulty: {0}'}"  FontSize="15" HorizontalOptions="Center"/>
-                            <Label Text="{Binding Description}" FontAttributes="Bold" FontSize="23" HorizontalOptions="Center"/>
-
+                            <Label Text="{Binding Difficulty, StringFormat='Difficulty: {0}'}"  
+                                   FontSize="15" HorizontalOptions="Center"/>
+                            <Label Text="{Binding Description}" FontAttributes="Bold" FontSize="23" 
+                                   HorizontalOptions="Center"/>
                         </VerticalStackLayout>
                     </Border>
                 </DataTemplate>
-                </CarouselView.ItemTemplate>
-            </CarouselView>
-
-            <IndicatorView x:Name="indicatorView"  IndicatorsShape="Circle" IndicatorColor="LightGray"  HorizontalOptions="Center" Grid.Row="2" />
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+        <IndicatorView x:Name="indicatorView"  IndicatorsShape="Circle" IndicatorColor="LightGray"  
+                       HorizontalOptions="Center" Grid.Row="2" />
         </Grid>
     </ContentPage>

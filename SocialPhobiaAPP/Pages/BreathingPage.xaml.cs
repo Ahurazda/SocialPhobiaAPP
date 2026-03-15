@@ -69,13 +69,14 @@ public partial class BreathingPage : ContentPage
 
         BreathingCircle.CancelAnimations();
         await ResetCircleToOriginalState();
-        BreathingButton.Text = "Start the breathing";
+        
     }
 
     private async Task ResetCircleToOriginalState()
     {
         _isAnimating = false;
         InstructionLabel.Text = "Get prepared...";
+        BreathingButton.Text = "Start the breathing";
 
         await BreathingCircle.ScaleToAsync(1, 200, Easing.CubicOut);
     }
