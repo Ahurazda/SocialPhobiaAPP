@@ -1,0 +1,1 @@
+This app is focused on offering help people with social anxiety through relaxation excercises, diary and chapters where users are introduced to social anxiety and CBT(Cognitive Behavioral Therapy) principles. The app is called Resocialize.
